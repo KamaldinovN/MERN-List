@@ -1,0 +1,4 @@
+{
+  "serverPort" : 5000,
+  "dataBaseURL":"mongodb+srv://nKama:123K@mern.7tfuwgl.mongodb.net/List?retryWrites=true&w=majority"
+}

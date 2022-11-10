@@ -1,0 +1,81 @@
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+.input-group input{
+    padding:15px;
+    margin-bottom: 5px;
+}
+
+.btn{
+    background-color: #888CF0;
+    color:#000000;
+    margin-top: 20px;
+    box-shadow: none;
+    border:none;
+    padding:15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.list-container{
+    margin-top:20px;
+}
+.list-item{
+        text-align: left;
+        padding:0 10px;
+        cursor:move;
+}
+.edit-btn{
+    background-image: url("../../assets/draw.png");
+    background-color: inherit;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    border: none;
+    height: 32px;
+    width: 32px;
+}
+.delete-btn{
+    background-image: url("../../assets/delete.png");
+    background-color: inherit;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    border: none;
+    height: 32px;
+    width: 32px;
+}
+.delete-btn:hover, .edit-btn:hover{
+    cursor: pointer;
+    scale: 85%;
+}
+
+.empty__list{
+    height: 30%;
+    width: 30%;
+    margin-top: 40px;
+}
+.username{
+    font-size: 20px;
+}
+.user__rank{
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: left;
+}
+.user__info{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.user__container:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
