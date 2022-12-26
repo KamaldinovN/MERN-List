@@ -2,15 +2,15 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchUsers = createAsyncThunk("/fetchUsers", async () => {
-  const { data } = await axios.get(`http://localhost:5000/`);
+  const { data } = await axios.get(`https://mernlist.onrender.com/`);
   return data;
 });
 export const fetchAddUser = createAsyncThunk(
   "/fetchAddUser",
   async (params) => {
     try {
-      await axios.post(`http://localhost:5000/`, params);
-      const { data } = await axios.get(`http://localhost:5000/`);
+      await axios.post(`https://mernlist.onrender.com/`, params);
+      const { data } = await axios.get(`https://mernlist.onrender.com/`);
       return data;
     } catch (err) {
       if (err) {
@@ -18,7 +18,7 @@ export const fetchAddUser = createAsyncThunk(
           err.response.data.message ||
             err.response.data.map((error) => error.msg)
         );
-        const { data } = await axios.get(`http://localhost:5000/`);
+        const { data } = await axios.get(`https://mernlist.onrender.com/`);
         return data;
       }
     }
@@ -28,7 +28,7 @@ export const fetchUpdateUserData = createAsyncThunk(
   "/fetchUpdateUserData",
   async (data) => {
     try {
-      await axios.patch(`http://localhost:5000/${data.id}`, data);
+      await axios.patch(`https://mernlist.onrender.com/${data.id}`, data);
     } catch (err) {
       if (err) {
         alert(
@@ -44,8 +44,8 @@ export const fetchUpdateUserDataDragDrop = createAsyncThunk(
   "/fetchUpdateUserDataDragDrop",
   async (params) => {
     try {
-      await axios.patch(`http://localhost:5000/`, params);
-      const { data } = await axios.get(`http://localhost:5000/`);
+      await axios.patch(`https://mernlist.onrender.com/`, params);
+      const { data } = await axios.get(`https://mernlist.onrender.com/`);
       return data;
     } catch (err) {
       if (err) {
@@ -55,7 +55,7 @@ export const fetchUpdateUserDataDragDrop = createAsyncThunk(
   }
 );
 export const fetchRemoveUser = createAsyncThunk("/fetchRemoveUser", (id) => {
-  axios.delete(`http://localhost:5000/${id}`);
+  axios.delete(`https://mernlist.onrender.com/${id}`);
 });
 
 const initialState = {
